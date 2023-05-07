@@ -82,26 +82,27 @@ This method copies data from a region of a buff to a region in a target, even if
 Now let's create a new buffer and transform "World" into "Worth". To do it, change the decimals in it. The equivalent decimals to "t" and "h" is 116 and 104.
 
 ```js
-let buff = Buffer.from("Hello World");
-let world_buffer = Buffer.alloc(5);
+const buff = Buffer.from('Hello World');
+const worldBuffer = Buffer.alloc(5);
 
 const TARGET_START = 0;
 const SOURCE_START = 6;
 const SOURCE_END = 11;
 
-buff.copy(world_buffer, TARGET_START, SOURCE_START, SOURCE_END);
+buff.copy(worldBuffer, TARGET_START, SOURCE_START, SOURCE_END);
 
-console.log(world_buffer.toJSON().data); // -> [ 87, 111, 114, 108, 100 ]
+console.log(worldBuffer.toJSON().data); // [ 87, 111, 114, 108, 100 ]
 
-world_buffer[3] = 116;
-world_buffer[4] = 104;
+worldBuffer[3] = 116;
+worldBuffer[4] = 104;
 
-console.log(world_buffer.toJSON().data); // -> [ 87, 111, 114, 116, 104 ]
+console.log(worldBuffer.toJSON().data); // -> [ 87, 111, 114, 116, 104 ]
 
-console.log(world_buffer.toString()); // -> "Worth"
+console.log(worldBuffer.toString()); // -> "Worth"
 console.log(buff.toString()); // -> "Hello World"
+
 ```
 
-> When using `Buffer.subarray()` it's necessary to provide an existing buffer from which the data can be copied to it's allocated memory. The amount of data that can be copied is limited by the size of the buffer. For example, if your buffer consists of only 10 bytes, you can only copy a maximum of 10 bytes.
+> When using `Buffer.copy()` it's necessary to provide an existing buffer from which the data can be copied to it's allocated memory. The amount of data that can be copied is limited by the size of the buffer. For example, if your buffer consists of only 10 bytes, you can only copy a maximum of 10 bytes.
 
 > As we allocated an additional 5 bytes of memory and copied the data into it, it's important to note that we now have two separate and independent buffers. Modifying one buffer does not affect the other.
