@@ -79,7 +79,7 @@ This method copies data from a region of a buff to a region in a target, even if
 - `sourceStart`: an integer that says from where copying from buffer should start at. **Default: 0**.
 - `sourceEnd`: an integer that say where copying from buffer should stop at. **Default: `buff.length`**;
 
-Now let's create a new buffer and transform "World" into "Worth". To do it, change the decimals in it. The equivalent decimals to "t" and "h" is 116 and 104.
+Now let's create a new buffer and transform "World" into "Worth". To do it, we are copying the indices 6 to 11. And in the copy changing the decimals in it. The equivalent decimals to "t" and "h" is 116 and 104.
 
 ```js
 const buff = Buffer.from('Hello World');

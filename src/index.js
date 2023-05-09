@@ -17,4 +17,4 @@ worldBuffer[4] = 104;
 console.log(worldBuffer.toJSON().data); // -> [ 87, 111, 114, 116, 104 ]
 
 console.log(worldBuffer.toString()); // -> "Worth"
-console.log(buff.toString()); // -> "Hello World"
+console.log(buff.toString('base64')); // -> "Hello World"
