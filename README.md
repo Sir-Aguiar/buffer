@@ -34,10 +34,10 @@ let buff = Buffer.from("Hello World");
 console.log(buff[8]);
 ```
 
-And to manipulate the content it's easy like that, give it an index and then assign it. For example, i wanna set the 19th byte to the value 249.
+And to manipulate the content it's easy like that, give it an index and then assign it. For example, i wanna set the 9th byte to the value 249.
 
 ```js
-buff[18] = 249;
+buff[8] = 249;
 ```
 
 To get the length of a given buffer, use the length property: `buff.length`, if a buffer has 100 bytes, 100 it is. And you can also use this length to iterate over the buffer.

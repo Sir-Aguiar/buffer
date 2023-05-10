@@ -1,6 +1,6 @@
-import { Buffer } from 'node:buffer';
+import { Buffer } from "node:buffer";
 
-const buff = Buffer.from('Hello World');
+const buff = Buffer.from("Hello World");
 const worldBuffer = Buffer.alloc(5);
 
 const TARGET_START = 0;
@@ -17,4 +17,4 @@ worldBuffer[4] = 104;
 console.log(worldBuffer.toJSON().data); // -> [ 87, 111, 114, 116, 104 ]
 
 console.log(worldBuffer.toString()); // -> "Worth"
-console.log(buff.toString('base64')); // -> "Hello World"
+console.log(buff.toString("base64")); // -> "Hello World"
