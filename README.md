@@ -1,3 +1,6 @@
+# Versão em Portugês / Portuguese version
+[Versão PT-BR](./README-pt.md)
+
 # Why do i need buffers ?
 
 JavaScript is good to handle strings, but when is needed to handle binary data... Not that good. Manipulate images, and binary files using only strings, it's insanity.
