@@ -1,4 +1,4 @@
-# Versão em Portugês / Portuguese version
+# Versão em Português / Portuguese version
 [Versão PT-BR](./README-pt.md)
 
 # Why do i need buffers ?
@@ -19,7 +19,6 @@ The UTF-8 encoding is by default, you can create it from another encodings, long
 ```js
 let buff = Buffer.from("Hello World", "utf-8");
 ```
-
 In case you want a certain amount of memory allocated, but don't have a value, you can specify the length of the buffer, without saying it's content, and then it's default filled with 0's
 
 ```js
